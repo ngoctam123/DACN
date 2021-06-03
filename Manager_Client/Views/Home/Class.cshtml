@@ -1,0 +1,278 @@
+﻿
+@{
+    ViewBag.Title = "Class";
+    var listclass = (List<Manager_Client.ViewModels.ClassViewModel>)ViewBag.listClass;
+
+}
+
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Trung Tâm Gia Sư</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--slider-->
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Assets/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</head>
+<body>
+    <div class="btm_border">
+        <div class="h_bg">
+            <div class="wrap">
+                <div class="header">
+                    <div class="logo">
+                        <h1><a href="index.html"><img src="~/Assets/images/2.png" alt=""></a></h1>
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a class="facebook" href="#" target="_blank"> </a></li>
+                            <li><a class="twitter" href="#" target="_blank"></a></li>
+                            <li><a class="googleplus" href="#" target="_blank"></a></li>
+                            <li><a class="pinterest" href="#" target="_blank"></a></li>
+                            <li><a class="dribbble" href="#" target="_blank"></a></li>
+                            <li><a class="vimeo" href="#" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class='h_btm'>
+                    <div class='cssmenu'>
+                        <ul>
+                            <li class='active'>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Giáo viên", "Teacher", "Home")</li>
+                            <li>@Html.ActionLink("Học sinh", "Student", "Home")</li>
+                            <li class='has-sub'>@Html.ActionLink("Lớp học", "Class", "Home")</li>
+                            <li class='last'>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
+                            <li class='active'><a href='http://localhost:50137/'><span>ĐĂNG NHẬP</span></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" value="">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="main_btm">
+        <div class="wrap">
+            <div class="main">
+                <div class="services">
+                    <div class="services-header">
+                        <h3>LỚP MỚI ĐANG CẦN GIA SƯ</h3>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="services-grids">
+                        @if (listclass != null)
+                         {
+                             foreach (var item in listclass) 
+                             {
+                                    <div class="services-grid">
+                                    <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                                    <p style="display:none">row_@item.ID </p>
+                                    <p>Thông tin lớp: @(item.Name ??"")</p>
+                                    <P>Địa chỉ: @(item.Address ??"")</P>
+                                    <p>Giáo viên: @(item.TeacherName)</p>
+                                    <p>Thuộc quản lý bộ môn: @(item.ScienceName != null ? item.ScienceName.ToString() : "")</p>
+                                    <p>Liên hệ: 0389750032</p>
+                                    <p>Người phụ trách: Võ Ngọc Tâm</p>
+                                    @*<p>Liên hệ: 0981734759</p>*@
+                                    <div>
+                                        <span><input type="submit" value="Đăng ký dạy "></span>
+                                    </div>
+                                    </div>
+                            }
+                        }
+
+                        @*<div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>row_@item.ID </p>
+                            <p>@(item.Address ??""</p>
+                            <P>Địa chỉ: trần văn Đang, p9, Quận 3 </P>
+                            <p>Mức lương: 1.200.000 VNĐ</p>
+                            <p>Thời gian: SX</p>
+                            <p>Số buổi: 2</p>
+                            <p>Yêu cầu: SV NỮ</p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>*@
+                            @*<div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>MÔN DẠY: LỚP 5 BÁO BÀI</p>
+                            <p>MS: 1563</p>
+                            <P>Địa chỉ: kp Mỹ Thạnh, P. Mỹ Xuân, TX Phú Mỹ, Vũng Tàu  </P>
+                            <p>Mức lương: 1.500.000 VNĐ</p>
+                            <p>Thời gian: T246 - Từ 6h-8h</p>
+                            <p>Số buổi: 3</p>
+                            <p>Yêu cầu: SV </p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>
+                        <div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>MÔN DẠY: LỚP 11 HÓA LÝ</p>
+                            <p>MS: 1564</p>
+                            <P>Địa chỉ: Khu Nhà Thái Bình Dương, Tân Phước Khánh, Tân Uyên,Bình Dương  </P>
+                            <p>Mức lương: 2.400.000 VNĐ</p>
+                            <p>Thời gian: SX</p>
+                            <p>Số buổi: 4</p>
+                            <p>Yêu cầu: SV </p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="services-grids">
+                        <div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>MÔN DẠY: LỚP 9 TOÁN LÝ </p>
+                            <p>MS: 1565</p>
+                            <P>Địa chỉ: NGUYÊN HỒNG, BÌNH THẠNH </P>
+                            <p>Mức lương: 1.600.000 VNĐ</p>
+                            <p>Thời gian: T2 4 6</p>
+                            <p>Số buổi: 3</p>
+                            <p>Yêu cầu: SV NỮ</p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>
+                        <div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>MÔN DẠY: LỚP 10 TLH</p>
+                            <p>MS: 1566</p>
+                            <P>Địa chỉ: TÔ NGỌC VÂN, P.LINH ĐÔNG,THỦ ĐỨC  </P>
+                            <p>Mức lương: 1.200.000 VNĐ</p>
+                            <p>Thời gian: T2 4</p>
+                            <p>Số buổi: 2</p>
+                            <p>Yêu cầu: SV NỮ</p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>
+                        <div class="services-grid">
+                            <a href="#">LỚP ĐANG CẦN GIA SƯ</a>
+                            <p>MÔN DẠY: LỚP 1(T,TV)</p>
+                            <p>MS: 1564</p>
+                            <P>Địa chỉ: ĐẶNG THÚC VINH ĐÔNG THẠNH HÓC MÔN   </P>
+                            <p>Mức lương: 4.000.000 VNĐ</p>
+                            <p>Thời gian: 7H-8H30</p>
+                            <p>Số buổi: 5</p>
+                            <p>Yêu cầu: GV NỮ</p>
+                            <p>Liên hệ: 0981734759</p>
+                            <div>
+                                <span><input type="submit" value="Đăng ký dạy "></span>
+                            </div>
+                        </div>*@
+                        <div class="clear"> </div>
+                    </div>
+
+                    <div class="specials">
+                        <div class="specials-heading">
+                            <h3>DẠY KÈM </h3>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="clear"> </div>
+                        <div class="specials-grids">
+                            <div class="special-grid">
+                                <img src="~/Assets/images/daykem1.png" title="image-name">
+                                <a href="#">GIA SƯ DẠY KÈM LỚP 5 </a>
+                                <p>​​​​​​​Tìm gia sư dạy kèm lớp 5 sao cho ‘‘chuẩn’’?  Gia sư dạy kèm lớp 5 đạt những tiêu chuẩn nào để thích hợp cho con của...</p>
+                            </div>
+                            <div class="special-grid">
+                                <img src="~/Assets/images/daykem2.png" title="image-name">
+                                <a href="#">NHỮNG KHÓ KHĂN VÀ KINH NGHIỆM KHI CHỌN GIA SƯ DẠY KÈM LỚP 1</a>
+                                <p>Nếu ba mẹ đang có con học lớp 1 và đang lo lắng về việc tìm kiếm gia sư thì hãy liên hệ ngay với Gia Sư Tuổi Trẻ để được tư vấn tìm gia...</p>
+                            </div>
+                            <div class="special-grid spe-grid">
+                                <img src="~/Assets/images/daykem3.png" title="image-name">
+                                <a href="#">KINH NGHIỆM TÌM GIA SƯ DẠY KÈM TIẾNG ANH CHẤT LƯỢNG NHẤT CHO BÉ</a>
+                                <p>Việc tìm gia sư dạy kèm Tiếng Anh tại nhà cho bé thường làm ba mẹ rất hoang mang vì hiện tại có quá nhiều chương trình học và gia sư, hãy liên...</p>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bg">
+        <div class="wrap">
+            <div class="footer">
+                <div class="box1">
+                    <h4 class="btm">Chiêu sinh lớp học hè</h4>
+                    <p> <img src="~/Assets/images/class.jpg"> </p>
+                    <p>Để đáp ứng cho nhu cầu học sinh học thêm hè, trung tâm cung cấp các lớp học hè, ôn luyện thi cho các em, những hoc sinh có nhu cầu giàng dạy tại nhà vui lòng liên hệ trực tiếp trung tâm để biết thêm thông tin chi tiết.</p>
+                    <p>Các lớp giảng dạy cho kỳ thi tốt nghiệp THPT được mở bắt đầu từ ngày 10/6/2021, Thời gian đăng ký lớp hoc từ ngày 1/6-7/6/2021, phụ huynh học sinh lưu ý để tránh mắc sai sót  </p>
+                </div>
+                <div class="box1">
+                    <h4 class="btm">Tin Tức</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="#">NHỮNG ĐIỀU CẦN BIẾT VỀ KỸ NĂNG VÀ LƯƠNG GIA SƯ TIẾNG ANH HIỆN NAY </a></li>
+                            <li><a href="#">TÌM GIA SƯ DẠY TIẾNG ANH GIAO TIẾP</a></li>
+                            <li><a href="#">Vì sao việc cần tìm gia sư dạy toán lớp 9 lại quan trọng đến như vậy?</a></li>
+                            <li><a href="#">Ban cần tìm gia sư dạy lớp cơ bản lớp 10,11,12. </a></li>
+                            <li><a href="#">Gia sư dạy kèm tại nhà hay tại lớp sẽ tốt hơn</a></li>
+                            <li><a href="#">Các lớp học giành cho học sinh trường chuyên? </a></li>
+                            <li><a href="#">Những vấn đề học sinh hay mắc phải trong quá trình học thêm ? </a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="box1">
+                    <h4 class="btm">Liên hệ</h4>
+                    <div class="box1_address">
+                        <p>25D Mac Dinh Chi, P4</p>
+                        <p>TP Da Lat, Lam Dong</p>
+                        <p>Viet Nam</p>
+                        <p>Phone:(00) 399 220 714</p>
+                        <p>Fax: (000) 000 00 00 0</p>
+                        <p>Email: <a href="darklegen1021999@gmail.com">info[at]mycompany.com</a></p>
+                        <p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--footer1-->
+    <div class="ftr-bg">
+        <div class="wrap">
+            <div class="footer">
+                <div class="copy">
+                    <p class="w3-link">© 2013 Public-Library. All Rights Reserved | Design by&nbsp; <a href="http://w3layouts.com/"> Nguyen Trung Tin</a></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

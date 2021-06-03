@@ -1,0 +1,238 @@
+﻿@{
+    ViewBag.Title = "Giáo Viên";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Trung Tâm Gia Sư</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--slider-->
+    <link href="~/Assets/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Assets/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</head>
+<body>
+    <div class="btm_border">
+        <div class="h_bg">
+            <div class="wrap">
+                <div class="header">
+                    <div class="logo">
+                        <h1><a href="index.html"><img src="~/Assets/images/2.png" alt=""></a></h1>
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a class="facebook" href="#" target="_blank"> </a></li>
+                            <li><a class="twitter" href="#" target="_blank"></a></li>
+                            <li><a class="googleplus" href="#" target="_blank"></a></li>
+                            <li><a class="pinterest" href="#" target="_blank"></a></li>
+                            <li><a class="dribbble" href="#" target="_blank"></a></li>
+                            <li><a class="vimeo" href="#" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class='h_btm'>
+                    <div class='cssmenu'>
+                        <ul>
+                            <li class='active'>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Giáo viên", "Teacher", "Home")</li>
+                            <li>@Html.ActionLink("Học sinh", "Student", "Home")</li>
+                            <li class='has-sub'>@Html.ActionLink("Lớp học", "Class", "Home")</li>
+                            <li class='last'>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
+                            <li class='active'><a href='http://localhost:50137/'><span>ĐĂNG NHẬP</span></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" value="">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="main_btm">
+        <div class="wrap">
+            <div class="main">
+                <div class="about-us">
+                    <div class="about-header">
+                        <h3>Trung Tâm Gia sư </h3>
+                        <div class="clear"> </div>
+                    </div>
+                    <div class="about-info">
+                        <a href="#">Trung Tâm Gia sư </a>
+                        <p>
+                            Trung tâm gia sư : Với nhiều năm hoạt động trong lĩnh vực gia sư, gia sư tuổi trẻ đúc kết được rất nhiều kinh nghiệm theo thời gian và từng bước khẳng đinh mình như là một trung tâm gia sư uy tín nhất trong cả nước. Để đồng hành cùng với quý phụ huynh và học sinh tạo ra một con đường đi đúng đắn hướng các em theo một con đường nhanh nhất dẫn tới thành công. Chính vì thế sự ra đời của trung tâm gia sư tuổi trẻ với hơn 14 chi nhánh trong cả nước để đáp ứng được nhu cầu và tạo ra một dịch vụ gia sư uy tín và chất lượng nhất.
+
+                            Văn phòng Gia Sư Tuổi Trẻ hiện đã cộng tác với rất nhiều Giáo Viên và Sinh Viên ưu tú của các trường: ĐH sư Phạm, ĐH Bách Khoa, ĐH KHXH & NV, ĐH Tự Nhiên, ĐH Y Dược, ĐH Kinh Tế, ĐH Kiến Trúc...trên địa bàn thành phố HCM và trong cả nước, nhằm tạo ra một đội ngũ gia sư có chuyên môn cao, đáp ứng mọi nhu cầu học tập và rèn luyện cho tất cả học sinh ở mọi cấp, mọi trình độ.
+
+                            (Qúy phụ huynh liên hệ hotline: 0981734759 - 0383716432 đế được tư vấn hoàn toàn miễn phí)
+
+                            Đăng ký gia sư miễn phí    <a href="contact.html">tại đây</a>
+
+                            Với phương châm "LUÔN LUÔN CỐ GẮNG, LUÔN LUÔN HỌC HỎI, ĐỂ MANG ĐẾN CHO QUÝ PHỤ HUYNH VÀ HỌC SINH MỘT DỊCH VỤ GIA SƯ UY TÍN VÀ CHẤT LƯỢNG NHẤT". Hiện nay có rất nhiều trung tâm mọc lên với chất lượng với dịch vụ rất kém, tuyển chọn giáo viên , sinh viên rất hời hợt khiến cho việc giảng dạy k mang đến hiệu quả tốt nhất cho các em học sinh. Chúng tôi đội ngũ Gia Sư Tuổi Trẻ  với sự trẻ trung năng động của mình, trách nhiệm , nhiệt huyết với sự cam kết chắc chắn sẽ mang đến cho quý phu huynh và học sinh một dịch vụ tốt nhất, tuyển chọn và đạo tạo ra những giáo viên, sinh viên xuất sắc nhất, tinh thấn trách nhiệm cao.
+                        </p>
+                        <img src="~/Assets/images/12.png">
+                        <p>TRUNG TÂM GIA SƯ TUỔI TRẺ NHẬN DẠY KÈM TẠI NHÀ CÁC MÔN:</p>
+                        <p>Toán - Lý - Hóa - Sinh - Văn...</p>
+                        <p> + Dạy kèm từ lớp 1 đến lớp 12 tại nhà...</p>
+                        <p>+ Anh văn cơ bản - IELTS - TOELF - TOEIC...</p>
+                        <p>+ Các môn Vẽ - Đàn Piano, organ,Giutar- Nhạc...</p>
+                        <p>+ Luyện viết chữ đẹp...</p>
+                        <p>+ Dạy kèm ngoại ngữ: Tiếng Hoa - Hàn - Nhật - Pháp...</p>
+                        <p>+ Luyện thi đại học môn: Toán, Lý, Hóa, Anh Văn, Sinh....</p>
+                        <p>+ Tin học: Word, excel, Autocad...</p>
+                        <p>+ Tiếng việt cho người nước ngoài</p>
+                        <p>+ Kế toán trưởng</p>
+
+                        <li>PHƯƠNG PHÁP GIẢNG DẠY CỦA TRUNG TÂM GIA SƯ TUỔI TRẺ</li>
+
+                        <p>- Kiểm tra đầu vào để phân loại học sinh và chuẩn bị giáo trình phù hợp cho từng em học sinh.</p>
+                        <p>- Ôn Tập lại toàn bộ những kiến thức đã học ở trường. Giảng giải chi tiết với những ví dụ cụ thể để các em có thể nắm chắc kiến thức đã được học.</p>
+                        <p>-Lấy lại căn bản cho học sinh mất gốc bằng những kiến thức cơ bản, ví dụ bám sát giáo trình học.</p>
+                        <p>-Với những em có học lực khá giỏi chúng tôi sẽ nâng cao kiến thức dạy để các em có thể phát huy hết khả năng của mình.</p>
+                        <p>-Nội dung bài giảng được biên soạn bởi những chuyên gia của trung tâm đã có nhiều năm kinh nghiệm giảng dạy.</p>
+                        <p>-Không chú trọng vào lý thuyết quá, chúng tôi luôn hướng học sinh phải thực hành nhiều bằng những bài tập cơ bản và nâng cao.</p>
+                        <p>-Thường xuyên cập nhật kết quả cho quý phụ huynh ít nhất một tuần một lần</p>
+
+                        <li>CAM KẾT CHẤT LƯỢNG</li>
+
+                        <p>Hiệu quả uy tín là tiêu chí hàng đầu của trung tâm gia sư tuổi trẻ</p>
+                        <p>* Cung cấp những gia sư có trình độ chuyên môn cao.</p>
+                        <p>* Hủy hợp đồng đối với những gia sư thiếu trách nhiệm.</p>
+                        <p>* Gia sư chúng tôi được đào tạo bài bản trước khi nhận lớp.</p>
+                        <p>* Cam kết học sinh sẽ tiến bộ sau nữa tháng học.</p>
+                        <p>* Phụ huynh chỉ đóng học phí sau khi hài lòng về cách dạy của các gia sư.</p>
+
+                        <p>(Qúy phụ huynh liên hệ hotline: 0981734759 - 0383716432 đế được tư vấn hoàn toàn miễn phí)</p>
+
+                        <li>Đăng ký gia sư miễn phí    <a href="contact.html">tại đây</a></li>
+
+                        <p>
+                            ĐIỂM KHÁC BIỆT TRUNG TÂM GIA SƯ >>> PHÍ RẺ
+                            Nếu bạn còn lo ngại học phí trên trời như một vài trung tâm khác. Hãy gọi cho chúng tôi để bạn biết được học phí như thế nào? chắc chắn sẽ làm cho bạn hài lòng với chi phí phải chăng và dịch vụ gia sư hoàn hảo.
+
+                            SDT: 0383716432
+
+                            LÀ MỘT TRUNG TÂM GIA SƯ UY TÍN CHO SINH VIÊN ?
+                            Chúng tôi thấu hiểu những khó khăn của các bạn sinh viên khi đi dạy nên trung tâm gia sư tuổi trẻ hổ trợ tối đa cho các bạn sinh viên kể cả giáo viên về mức phí hợp lý nhất. Và trung tâm sẽ hoàn tiền 100% nếu phụ huynh hủy lớp do một số khách quan nào đó. Trung tâm sẽ hổ trợ các bạn sinh viên tìm lớp mới phù hợp nhanh nhất có thể.
+
+                            Chúng tôi với uy tín, trách nhiệm của mình sẽ đem đến cho quý Phụ Huynh sự hài lòng nhất về việc giảng dạy của gia sư của trung tâm và việc học của con em các bạn.
+
+                            Lưu ý: Trung Tâm sẽ cho gia sư dạy thử từ 2 - 3 buổi trước khi dạy chính thức để đảm bảo chất lượng gia sư của trung tâm. Nếu sau thời gian dạy thử quý phụ huynh thấy gia sư của trung tâm dạy không đạt yêu cầu hay không phù hợp thì xin quý phụ huynh hãy báo ngay cho trung tâm, chúng tôi sẽ đổi ngay cho các bạn một gia sư khác thích hợp hơn.
+                        </p>
+                        <div class="specials">
+                            <div class="specials-heading">
+                                <h3>Giáo viên</h3>
+                                <div class="clear"> </div>
+                            </div>
+                            <div class="clear"> </div>
+                            <div class="specials-grids">
+                                <div class="special-grid">
+                                    <img src="images/gv1.jpg" title="image-name">
+                                    <a href="#">Latest Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="special-grid">
+                                    <img src="images/gv2.jpg" title="image-name">
+                                    <a href="#">Pre Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="special-grid spe-grid">
+                                    <img src="images/gv3.jpg" title="image-name">
+                                    <a href="#">Free Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="clear"> </div>
+                            </div>
+                            <div class="specials-grids">
+                                <div class="special-grid">
+                                    <img src="images/gv4.jpg" title="image-name">
+                                    <a href="#">Latest Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="special-grid">
+                                    <img src="images/gv5.jpg" title="image-name">
+                                    <a href="#">Pre Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="special-grid spe-grid">
+                                    <img src="images/gv6.jpg" title="image-name">
+                                    <a href="#">Free Plans</a>
+                                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                                </div>
+                                <div class="clear"> </div>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <!---End-about---->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer-bg">
+            <div class="wrap">
+                <div class="footer">
+                    <div class="box1">
+                        <h4 class="btm">Chiêu sinh lớp học hè</h4>
+                        <p> <img src="~/Assets/images/class.jpg"> </p>
+                        <p>Để đáp ứng cho nhu cầu học sinh học thêm hè, trung tâm cung cấp các lớp học hè, ôn luyện thi cho các em, những hoc sinh có nhu cầu giàng dạy tại nhà vui lòng liên hệ trực tiếp trung tâm để biết thêm thông tin chi tiết.</p>
+                        <p>Các lớp giảng dạy cho kỳ thi tốt nghiệp THPT được mở bắt đầu từ ngày 10/6/2021, Thời gian đăng ký lớp hoc từ ngày 1/6-7/6/2021, phụ huynh học sinh lưu ý để tránh mắc sai sót.  </p>
+                        <p>Thông tin chi tiết : <a href="#">tại đây.</a></p>
+                    </div>
+                    <div class="box1">
+                        <h4 class="btm">Tin Tức</h4>
+                        <nav>
+                            <ul>
+                                <li><a href="#">NHỮNG ĐIỀU CẦN BIẾT VỀ KỸ NĂNG VÀ LƯƠNG GIA SƯ TIẾNG ANH HIỆN NAY </a></li>
+                                <li><a href="#">TÌM GIA SƯ DẠY TIẾNG ANH GIAO TIẾP</a></li>
+                                <li><a href="#">Vì sao việc cần tìm gia sư dạy toán lớp 9 lại quan trọng đến như vậy?</a></li>
+                                <li><a href="#">Ban cần tìm gia sư dạy lớp cơ bản lớp 10,11,12. </a></li>
+                                <li><a href="#">Gia sư dạy kèm tại nhà hay tại lớp sẽ tốt hơn</a></li>
+                                <li><a href="#">Các lớp học giành cho học sinh trường chuyên? </a></li>
+                                <li><a href="#">Những vấn đề học sinh hay mắc phải trong quá trình học thêm ? </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="box1">
+                        <h4 class="btm">Liên hệ</h4>
+                        <div class="box1_address">
+                            <p>25D Mac Dinh Chi, P4</p>
+                            <p>TP Da Lat, Lam Dong</p>
+                            <p>Viet Nam</p>
+                            <p>Phone:(00) 399 220 714</p>
+                            <p>Fax: (000) 000 00 00 0</p>
+                            <p>Email: <a href="darklegen1021999@gmail.com">info[at]mycompany.com</a></p>
+                            <p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer1-->
+        <div class="ftr-bg">
+            <div class="wrap">
+                <div class="footer">
+                    <div class="copy">
+                        <p class="w3-link">© 2013 Public-Library. All Rights Reserved | Design by&nbsp; <a href="http://w3layouts.com/"> Nguyen Trung Tin</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

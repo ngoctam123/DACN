@@ -1,0 +1,198 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Trung Tâm Gia Sư</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='//fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <link href="~/Assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--slider-->
+    <link href="~/Assets/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="~/Assets/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="~/Assets/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</head>
+<body>
+    <div class="btm_border">
+        <div class="h_bg">
+            <div class="wrap">
+                <div class="header">
+                    <div class="logo">
+                        <h1><a href="index.html"><img src="~/Assets/images/2.png" alt=""></a></h1>
+                    </div>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a class="facebook" href="#" target="_blank"> </a></li>
+                            <li><a class="twitter" href="#" target="_blank"></a></li>
+                            <li><a class="googleplus" href="#" target="_blank"></a></li>
+                            <li><a class="pinterest" href="#" target="_blank"></a></li>
+                            <li><a class="dribbble" href="#" target="_blank"></a></li>
+                            <li><a class="vimeo" href="#" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class='h_btm'>
+                    <div class='cssmenu'>
+                        <ul>
+                            <li class='active'>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Giáo viên", "Teacher", "Home")</li>
+                            <li>@Html.ActionLink("Học sinh", "Student", "Home")</li>
+                            <li class='has-sub'>@Html.ActionLink("Lớp học", "Class", "Home")</li>
+                            <li class='last'>@Html.ActionLink("Liên hệ", "Contact", "Home")</li>
+                            <li class='active'><a href='http://localhost:50137/'><span>ĐĂNG NHẬP</span></a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" value="">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------ Slider_bg ------------>
+    <div class="slider_bg">
+        <div class="wrap">
+            <!------ Slider------------>
+            <div class="slider">
+                <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <img src="~/Assets/images/6.jpg" data-thumb="~/Assets/images/1.jpg" alt="" />
+                        <img src="~/Assets/images/7.jpg" data-thumb="~/Assets/images/2.jpg" alt="" />
+                        <img src="~/Assets/images/8.jpg" data-thumb="~/Assets/images/3.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <!------End Slider ------------>
+            <div class="grids_1_of_3">
+                <div class="grid_1_of_3 images_1_of_3">
+                    <img src="~/Assets/images/1.png">
+                    <h3>Giới thiệu</h3>
+                    <p>Bằng nhiều năm kinh nghiệm trong công tác giảng dạy, chúng tôi hiểu rằng: DẠY KÈM là phương pháp tốt nhất để HỌC SINH YẾU dễ hiểu bài và HỌC SINH GIỎI nhanh nâng cao kiến thức. Mong muốn đem đến cho các quý phụ huynh những gia sư chất lượng tốt nhất.</p>
+                </div>
+                <div class="grid_1_of_3 images_1_of_3">
+                    <img src="~/Assets/images/3.png">
+                    <h3>Gia sư</h3>
+                    <p>Trung tâm cung cấp đội gia sư, giáo viên chuyên nghiệp, đảm bảo cải thiện chất lượng học tập cho học sinh. Với kinh nghiệm giảng dạy từ các trường nổi tiếng cam kết đem lại kết quả học tập tốt cho các em .</p>
+                </div>
+                <div class="grid_1_of_3 images_1_of_3">
+                    <img src="~/Assets/images/4.png">
+                    <h3>Lớp học</h3>
+                    <p>Đa dạng về môn học cho học sinh chọn lựa. Bên cạnh đó, trung tâm còn mở những lớp nâng cao cho các em có nhu cầu ôn thi, luyện thi cấp tỉnh, thi quốc gia, thi đại học,... </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <div class="main_bg">
+        <div class="wrap">
+            <div class="main">
+                <div class="content">
+                    <h2></h2>
+                    <h3>BẢNG GIÁ THAM KHẢO</h3>
+                    <p> <img src="~/Assets/images/banggia.png"> </p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_btm">
+            <div class="wrap">
+                <div class="main">
+                    <div class="gallery">
+                        <h3>Our Classroom</h3>
+                        <ul>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery1.jpg"><img src="~/Assets/images/gallery1.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery2.jpg"><img src="~/Assets/images/gallery2.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery3.jpg"><img src="~/Assets/images/gallery3.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery4.jpg"><img src="~/Assets/images/gallery4.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery4.jpg"><img src="~/Assets/images/gallery4.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery3.jpg"><img src="~/Assets/images/gallery3.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery5.jpg"><img src="~/Assets/images/gallery5.jpg" alt=""></a><a href="#"></a></li>
+                            <li><a class="gallery-img" href="~/Assets/images/gallery6.jpg"><img src="~/Assets/images/gallery6.jpg" alt=""></a><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript" src="~/Assets/js/jquery.lightbox.js"></script>
+                    <link rel="stylesheet" type="text/css" href="~/Assets/css/lightbox.css" media="screen">
+                    <script type="text/javascript">
+				    $(function() {
+				        $('.gallery a.gallery-img').lightBox();
+				    });
+                    </script>
+                    <div class="terminals">
+                        <h3>Môn học</h3>
+                        <p>Trung tâm bao gôm các lớp từ cơ bàn đến nâng cao giúp các em học sinh có thể chọn cho mình một lớp học thích hợp. </p>
+                        <p>Bên cạnh đó, các lớp được chia ra theo các môn học bao gồm : Toán, Lý, Hóa, Anh Văn, Sinh,... Đối với những lớp ôn thi đại học sẽ chia theo khối để luyện thi các tổ hợp môn khác nhau.   </p>
+                        <span><a href="#">- Cao Hữu Anh Tú </a> Thailan</span>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer-bg">
+            <div class="wrap">
+                <div class="footer">
+                    <div class="box1">
+                        <h4 class="btm">Chiêu sinh lớp học hè</h4>
+                        <p> <img src="images/class.jpg"> </p>
+                        <p>Để đáp ứng cho nhu cầu học sinh học thêm hè, trung tâm cung cấp các lớp học hè, ôn luyện thi cho các em, những hoc sinh có nhu cầu giàng dạy tại nhà vui lòng liên hệ trực tiếp trung tâm để biết thêm thông tin chi tiết.</p>
+                        <p>Các lớp giảng dạy cho kỳ thi tốt nghiệp THPT được mở bắt đầu từ ngày 10/6/2021, Thời gian đăng ký lớp hoc từ ngày 1/6-7/6/2021, phụ huynh học sinh lưu ý để tránh mắc sai sót  </p>
+                    </div>
+                    <div class="box1">
+                        <h4 class="btm">Tin Tức</h4>
+                        <nav>
+                            <ul>
+                                <li><a href="#">NHỮNG ĐIỀU CẦN BIẾT VỀ KỸ NĂNG VÀ LƯƠNG GIA SƯ TIẾNG ANH HIỆN NAY </a></li>
+                                <li><a href="#">TÌM GIA SƯ DẠY TIẾNG ANH GIAO TIẾP</a></li>
+                                <li><a href="#">Vì sao việc cần tìm gia sư dạy toán lớp 9 lại quan trọng đến như vậy?</a></li>
+                                <li><a href="#">Ban cần tìm gia sư dạy lớp cơ bản lớp 10,11,12. </a></li>
+                                <li><a href="#">Gia sư dạy kèm tại nhà hay tại lớp sẽ tốt hơn</a></li>
+                                <li><a href="#">Các lớp học giành cho học sinh trường chuyên? </a></li>
+                                <li><a href="#">Những vấn đề học sinh hay mắc phải trong quá trình học thêm ? </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="box1">
+                        <h4 class="btm">Liên hệ</h4>
+                        <div class="box1_address">
+                            <p>25D Mac Dinh Chi, P4</p>
+                            <p>TP Da Lat, Lam Dong</p>
+                            <p>Viet Nam</p>
+                            <p>Phone:(00) 399 220 714</p>
+                            <p>Fax: (000) 000 00 00 0</p>
+                            <p>Email: <a href="darklegen1021999@gmail.com">info[at]mycompany.com</a></p>
+                            <p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer1-->
+        <div class="ftr-bg">
+            <div class="wrap">
+                <div class="footer">
+                    <div class="copy">
+                        <p class="w3-link">© 2013 Public-Library. All Rights Reserved | Design by&nbsp; <a href="http://w3layouts.com/"> Nguyen Trung Tin</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
