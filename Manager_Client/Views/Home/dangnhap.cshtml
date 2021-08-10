@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Trung Tâm Gia sư Ell</title>
+    <title>Trung tâm gia sư Ell</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="eCommerce HTML Template Free Download" name="keywords">
     <meta content="eCommerce HTML Template Free Download" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="~/Assets/img/favicon.ico" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="lib/slick/slick.css" rel="stylesheet">
-    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link href="~/Assets/lib/slick/slick.css" rel="stylesheet">
+    <link href="~/Assets/lib/slick/slick-theme.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="~/Assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -67,7 +67,7 @@
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tài Khoản</a>
                             <div class="dropdown-menu">
                                 <a href="login.html" class="dropdown-item">Đăng Nhập</a>
-                                <a href="Register.html" class="dropdown-item">Đăng Kí</a>
+                                <a href="https://localhost:44395/Home/dangki" class="dropdown-item">Đăng Kí</a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                 <div class="col-md-3">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="img/logo111.png" alt="Logo">
+                            <img src="~/Assets/img/logo111.png" alt="Logo">
                         </a>
                     </div>
                 </div>
@@ -96,7 +96,6 @@
                 <div class="col-md-3">
                     <div class="user">
 
-                        </a>
                     </div>
                 </div>
             </div>
@@ -108,68 +107,48 @@
         <div class="container-fluid">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
-
-                <li class="breadcrumb-item active">Liên Hệ</li>
+                <li class="breadcrumb-item"><a href="#">Tài Khoản</a></li>
+                <li class="breadcrumb-item active">Đăng Nhập</li>
             </ul>
         </div>
     </div>
     <!-- Breadcrumb End -->
-    <!-- Contact Start -->
-    <div class="contact">
+    <!-- Login Start -->
+    <div class="login">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h2>Địa chỉ</h2>
-                        <h3><i class="fa fa-map-marker"></i>61-Võ Trường Toản-Đà Lạt</h3>
-                        <h3><i class="fa fa-envelope"></i>1710292@dlu.edu.vn</h3>
-                        <h3><i class="fa fa-phone"></i>+8434-550-6845</h3>
-                        <div class="social">
-
-                        </div>
+                <div class="col-lg-6">
+                    <div>
+                        <img src="~/Assets/img/dangnhap2.png" alt="Logo" style="margin-top: -31px;">
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="contact-info">
-                        <h2>Trung Tâm</h2>
-                        <h3><i class="fa fa-map-marker"></i>62-Võ Trường Toản-Đà Lạt</h3>
-                        <h3><i class="fa fa-envelope"></i>1710292@dlu.edu.vn</h3>
-                        <h3><i class="fa fa-phone"></i>+8434-550-6845</h3>
-                        <div class="social">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact-form">
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Tên" />
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Email" />
+                <div class="col-lg-6">
+                    <div class="login-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Tên đăng nhập</label>
+                                <input class="form-control" type="text" placeholder="Tên Đăng Nhập">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Mật Khẩu</label>
+                                <input class="form-control" type="text" placeholder="Mật Khẩu">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="newaccount">
+                                    <label class="custom-control-label" for="newaccount">Duy Trì Đăng nhập</label>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Chủ Đề" />
+                            <div class="col-md-12">
+                                <button class="btn">Đăng Nhập</button>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="5" placeholder="Lời Nhắn"></textarea>
-                            </div>
-                            <div><button class="btn" type="submit">Gửi lời nhắn</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.2189445768668!2d108.44457671481173!3d11.95933769152555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171130766f45f27%3A0x362d6c885d3aeb8a!2zNjEgxJDGsOG7nW5nIFbDtSBUcsaw4budbmcgVG_huqNuLCBQaMaw4budbmcgOCwgVGjDoG5oIHBo4buRIMSQw6AgTOG6oXQsIEzDom0gxJDhu5NuZw!5e0!3m2!1svi!2s!4v1621591271218!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <!-- Login End -->
     <!-- Footer Start -->
     <div class="footer">
         <div class="container-fluid">
@@ -209,15 +188,16 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h2></h2>
-                        <ul>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
 
+
+            <div class="col-md-6" style="margin: 0 auto;">
+                <h1></h1>
+
+
+
+            </div>
 
         </div>
     </div>

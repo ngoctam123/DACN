@@ -18,6 +18,12 @@ namespace Manager_Client
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "dangki",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "User", action = "dangki", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

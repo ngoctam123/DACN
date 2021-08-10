@@ -1,0 +1,328 @@
+﻿@{
+    ViewBag.Title = "Student";
+    var listclass = (List<Manager_Client.ViewModels.ClassViewModel>)ViewBag.listClass;
+    var listScience = ViewBag.listScience;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Trung Tâm Gia sư Ell</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="eCommerce HTML Template Free Download" name="keywords">
+    <meta content="eCommerce HTML Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="~/Assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/slick/slick.css" rel="stylesheet">
+    <link href="~/Assets/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/Assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top bar Start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <i class="fa fa-envelope"></i>
+                    Caoanhtu20699@email.com
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-phone-alt"></i>
+                    +84345506845
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar End -->
+    <!-- Nav Bar Start -->
+    <div class="nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="https://localhost:44395/" class="nav-item nav-link">Trang Chủ</a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">Khóa Học</a>
+                            <div class="dropdown-menu">
+                                <a href="https://localhost:44395/Home/TeacherClass" class="dropdown-item">Dành Cho Giảng Viên</a>
+                                <a href="https://localhost:44395/Home/StudentClass" class="dropdown-item">Dành Cho Học Sinh</a>
+                            </div>
+                        </div>
+
+                        <a href="https://localhost:44395/Home/Contact1" class="nav-item nav-link">Liên Hệ</a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">Tài Khoản</a>
+                            <div class="dropdown-menu">
+                                <a href="http://localhost:50137/" class="dropdown-item">Đăng Nhập</a>
+                                <a href="https://localhost:44395/Home/dangki" class="dropdown-item">Đăng Kí</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="~/Assets/img/logo111.png" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Bar End -->
+    <!-- Breadcrumb Start -->
+    <div class="breadcrumb-wrap">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+
+                <li class="breadcrumb-item active">Lớp dành cho học viên</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Product List Start -->
+    <div class="product-view">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="product-view-top">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="product-search">
+                                            <h3><b>Danh Sách Lớp Học</b></h3>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-short">
+                                            <div class="dropdown">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="product-price-range">
+                                            <div class="dropdown">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @if (listclass != null)
+                        {
+                            foreach (var item in listclass)
+                            {
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <div class="product-title">
+                                            <a href="#">Thông tin lớp</a>
+
+                                        </div>
+                                        <div class="product-image">
+                                            <div class="tada" style="background-color:azure;">
+                                                <img src="~/Assets/img/giasu1.jpg" style="display:block;" />
+                                                <ul>
+                                                    <li style="display:none">row_@item.ID </li>
+                                                    <li>Tên lớp: @(item.Name ?? "")</li>
+                                                    <li>Địa chỉ: @(item.Address ??"")</li>
+                                                    <li>Giáo viên: @(item.TeacherName)</li>
+                                                    <li>Thuộc quản lý bộ môn: @(item.ScienceName != null ? item.ScienceName.ToString() : "")</li>
+                                                    <li>Thời gian bắt đầu: @item.CreatedDate</li>
+                                                    <li>Thời gian Kết thúc: @item.ModifiedDate</li>
+                                                    <li>Liên hệ: 0389750032</li>
+                                                    <li>Học phí: 400.000 VNĐ</li>
+                                                    <li>Người phụ trách: Võ Ngọc Tâm</li>
+                                                    @*<li>Số buổi: 3</li>
+                                                        <li>GV: Cao Hữu Anh Tú</li>
+                                                        <li>Liên hệ: 0981734759</li>*@
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3><span></span></h3>
+                                            <a class="btn" href=""><i class=""></i>Đăng Kí</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+
+
+                    </div>
+
+                    <!-- Pagination Start -->
+                    <div class="col-md-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Pagination Start -->
+                </div>
+
+                <!-- Side Bar Start -->
+                <div class="col-lg-4 sidebar">
+                    <div class="sidebar-widget category">
+                        <h2 class="title">Môn Học</h2>
+                        <nav class="navbar bg-light">
+                            <ul class="navbar-nav">
+                                @if (listScience != null)
+                                {
+
+                                    foreach (var item in listScience)
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#"><i class="fa fa-child"></i>@item.Name</a>
+                                        </li>
+
+
+                                    }
+                                }
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+
+
+
+                    <!-- Side Bar End -->
+                </div>
+            </div>
+        </div>
+        <!-- Product List End -->
+        <!-- Brand Start -->
+        <div class="brand">
+            <div class="container-fluid">
+                <div class="brand-slider">
+                    <div class="brand-item"><img src="~/Assets/img/brand-1.png" alt=""></div>
+                    <div class="brand-item"><img src="~/Assets/img/brand-2.png" alt=""></div>
+                    <div class="brand-item"><img src="~/Assets/img/brand-3.png" alt=""></div>
+                    <div class="brand-item"><img src="~/Assets/img/brand-4.png" alt=""></div>
+                    <div class="brand-item"><img src="~/Assets/img/brand-5.png" alt=""></div>
+                    <div class="brand-item"><img src="~/Assets/img/brand-6.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand End -->
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2></h2>
+                            <div class="contact-info">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Liên Lạc</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>61-Võ Trường Toản</p>
+                                <p><i class="fa fa-envelope"></i>1710292@dlu.edu.vn</p>
+                                <p><i class="fa fa-phone"></i>+84345506845</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Theo Dõi</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2></h2>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Footer Bottom Start -->
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="~/Assets/lib/easing/easing.min.js"></script>
+        <script src="~/Assets/lib/slick/slick.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="~/Assets/js/main.js"></script>
+</body>
+</html>
+
+
